@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ramabhadra", sans-serif;
+  background: black;
+}
+header {
+  display: flex;
+  height: 10vh;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+.logo {
+  flex: 1;
+  color: orange;
+  font-size: 3em;
+}
+.fa-shopping-bag {
+  position: relative;
+}
+
+nav {
+  flex: 5;
+}
+nav .nav-link {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  list-style: none;
+  position: relative;
+  z-index: 2;
+}
+nav .nav-link a {
+  text-decoration: none;
+  color: white;
+}
+nav .nav-link a:hover {
+  border-bottom: 2px solid orange;
+  transform: translateY(2px);
+  transition: 0.4s ease-out;
+}
+#active {
+  border-bottom: 2px solid orange;
+}
+.nav-link-logo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-logo {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  color: white;
+}
+.hamburger {
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  display: none;
+}
+
+.hamburger .line {
+  height: 2px;
+  width: 15px;
+  background-color: white;
+  margin: 3px;
+}
+.hamburger .line2 {
+  height: 2px;
+  width: 10px;
+}
+.hamburger .line3 {
+  height: 2px;
+  width: 5px;
+}
+section {
+  height: 90vh;
+  width: 80%;
+  margin: auto;
+}
+.container {
+  height: 90vh;
+  position: relative;
+}
+
+.intro-product {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.product-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-desc h1 {
+  position: absolute;
+  top: -12vh;
+  font-size: 160px;
+  color: white;
+  letter-spacing: -6px;
+}
+.intro-product {
+  position: absolute;
+  width: 100%;
+  top: 10vh;
+}
+.social {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.social-link {
+  list-style: none;
+}
+.social-link a {
+  color: white;
+}
+
+.img-burger {
+  display: flex;
+}
+
+.intro-product img {
+  height: 100%;
+  width: 750px;
+  /* max-width: 100%; */
+}
+
+.burger-desc {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.burger-desc h1 {
+  color: white;
+}
+.burger-desc hr {
+  border: 1px solid orange;
+  width: 5em;
+}
+.burger-desc p {
+  color: gray;
+}
+.burger-desc span {
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+}
+#left {
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  color: orange;
+  /* top: 30%;
+  left: 8%; */
+  cursor: pointer;
+}
+#right {
+  /* position: absolute; */
+  /* top: 30%;
+  right: 10%; */
+  display: flex;
+  align-items: center;
+  color: orange;
+  cursor: pointer;
+}
+#left:hover,
+#right:hover {
+  font-size: 3.1em;
+}
+/* 
+@media (max-width: 1260px) {
+  .product-desc {
+    position: static;
+  }
+  .product-desc h1 {
+    position: static;
+    font-size: 90px;
+  }
+  .intro-product {
+    position: static;
+  }
+  .intro-product img {
+    display: block;
+    width: 650px;
+    height: auto;
+    max-width: 100%;
+  }
+} */
+
+@media (max-width: 1200px) {
+  .product-desc {
+    position: static;
+  }
+  .product-desc h1 {
+    position: static;
+    font-size: 90px;
+    margin-top: -35px;
+  }
+  .intro-product {
+    position: static;
+  }
+  .intro-product img {
+    width: 700px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1040px) {
+  nav .nav-link {
+    display: none;
+  }
+  #search,
+  #user {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+@media (max-width: 900px) {
+  .logo h3 {
+    font-size: 30px;
+  }
+  .intro-product img {
+    width: 450px;
+    height: auto;
+  }
+  .hamburger {
+    margin-left: 15px;
+  }
+}
+@media (max-width: 550px) {
+  .container {
+    position: relative;
+  }
+  .product-desc h1 {
+    letter-spacing: 5px;
+    font-size: 65px;
+  }
+  #left {
+    position: absolute;
+    bottom: 7em;
+    font-size: 35px;
+    left: 3em;
+  }
+  #right {
+    position: absolute;
+    bottom: 7em;
+    right: 3em;
+    font-size: 35px;
+  }
+  .intro-product img {
+    width: 350px;
+  }
+  .burger-desc h1 {
+    font-size: 16px;
+  }
+  .burger-desc p {
+    font-size: 12px;
+  }
+  .social ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .social ul li {
+    margin-left: 15px;
+  }
+}
